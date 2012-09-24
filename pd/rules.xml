@@ -1,0 +1,261 @@
+<rules xmlns="http://namespaces.plone.org/diazo" xmlns:css="http://namespaces.plone.org/diazo/css" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	
+	<!-- Set default template -->
+    <theme href="templates/page.html" />
+
+	<xsl:output indent="yes" method="html" />
+	<xsl:strip-space elements="*" />
+	
+	<!-- Strip TinyMCE's nonsense [http://docs.diazo.org/en/latest/recipes/drop-empty-tags/index.html] -->
+	<drop content="p[not(*) and (not(normalize-space()) or text() = '&#160;')]" />
+	
+	<!-- No custom theme for admin pages -->
+	<notheme if-path="acl_users prefs_install_products_form portal_factory edit portal_registry @@discussion-settings login login_form logged_out @@manage-portlets select_default_page delete_confirmation solgemafullcalendarevents @@plone-upgrade" />
+	<notheme css:if-content="#edit-bar" if="$preview_mode != 'True'" />
+	<notheme css:if-content=".warning" />
+	<notheme if-path="source_editor.htm" />
+	<notheme if-path="ploneimage.htm"/>
+	<notheme if-path="anchor.htm" />
+	<notheme if-path="table.htm" />
+	<notheme if-path="attributes.htm" />
+	<notheme css:if-content="body[class*=controlpanel]" />
+	<notheme css:if-content="body[class*=atct_edit]" />
+	<notheme css:if-content="body[class*=folder_rename_form]" />
+	<notheme css:if-content="body[class*=portlet]" />
+    
+    <!-- Head replacement -->
+	<replace theme="/html/head/title" content="/html/head/title" />
+	<after theme="/html/head/script[5]" if-content="" content="/html/head/style[2]" />
+	
+	<!-- Main navigation -->
+	<replace css:theme-children="#navigation">
+		<xsl:for-each css:select="#portal-globalnav > li">
+			<xsl:if test="not(contains(a/span/text(),'Home'))">
+				<xsl:element name="li">
+					<xsl:if test="contains(@class,'selected')">
+						<xsl:attribute name="class">current</xsl:attribute>
+					</xsl:if>
+					<xsl:element name="a">
+						<xsl:attribute name="href">
+							<xsl:value-of select="a/@href" />
+						</xsl:attribute>
+						<xsl:attribute name="title">
+							<xsl:value-of select="a/@title" />
+						</xsl:attribute>
+						<xsl:copy-of select="a/span/text()" />
+					</xsl:element>
+				</xsl:element>
+			</xsl:if>
+		</xsl:for-each>
+	</replace>
+	
+	<!-- Page content -->
+	<replace css:theme="#content-placeholder" css:if-content="" css:content-children="#content-core > div:first-child" />
+	
+	<!-- Home page rules -->
+	<rules if-path="/">
+    	<theme href="templates/home.html" />
+	</rules>
+	
+	<!-- Landing page rules -->
+	<rules if-path="campaign">
+		<theme href="templates/campaign.html" />
+		<replace css:theme-children="#information h1" css:content-children=".documentFirstHeading" />
+		<replace css:theme="#form-prologue" css:content-children=".portlet-static-form-prologue" />
+		<replace css:theme-children="#form-placeholder" css:content-children=".portlet-static-form-url" />
+		<replace css:theme-children="#small-print" css:content-children=".portlet-static-small-print" />
+	</rules>
+	
+	<!-- Interior page rules -->
+	<rules if-not-path="/">
+		
+		<!-- Page content -->
+	    <replace css:theme-children="#content h1" css:content-children=".documentFirstHeading" />
+	    
+	    <!-- Calendar -->
+		<rules css:if-content="body.template-solgemafullcalendar_view">
+			<theme href="templates/calendar.html" />
+		</rules>
+		
+		<!-- Events -->
+		<rules css:if-content="body.template-event_view">
+			<theme href="templates/event.html" />
+			<replace css:theme-children="h1" css:content-children=".documentFirstHeading" />
+			<drop css:content=".eventDetails br" />
+			<replace css:theme="#event-placeholder">
+				<xsl:for-each css:select="#content-core">
+					<xsl:element name="h2">
+						<xsl:attribute name="class">subtitle</xsl:attribute>
+						<xsl:value-of select="div[1]/table/tbody/tr[1]/td" />
+						<xsl:text disable-output-escaping="yes"> <![CDATA[&mdash;]]></xsl:text>
+						<xsl:value-of select="div[1]/table/tbody/tr[2]/td" />
+					</xsl:element>
+					<xsl:copy-of select="div[2]" />
+					<xsl:copy-of select="p" />
+					<xsl:element name="hr" />
+					<xsl:element name="p">
+						<xsl:attribute name="class">align-center</xsl:attribute>
+						Add to Calendar:
+						<xsl:element name="br" />
+						<xsl:element name="a">
+							<xsl:attribute name="href">
+								<xsl:value-of select="div[1]/table/tbody/tr[3]/td/a[1]/@href" />
+							</xsl:attribute>
+							<xsl:attribute name="title">
+								<xsl:value-of select="div[1]/table/tbody/tr[3]/td/a[1]/@title" />
+							</xsl:attribute>
+							<xsl:copy-of select="div[1]/table/tbody/tr[3]/td/a[1]/span/text()" />
+						</xsl:element>
+						|
+						<xsl:element name="a">
+							<xsl:attribute name="href">
+								<xsl:value-of select="div[1]/table/tbody/tr[3]/td/a[2]/@href" />
+							</xsl:attribute>
+							<xsl:attribute name="title">
+								<xsl:value-of select="div[1]/table/tbody/tr[3]/td/a[2]/@title" />
+							</xsl:attribute>
+							<xsl:copy-of select="div[1]/table/tbody/tr[3]/td/a[2]/span/text()" />
+						</xsl:element>
+					</xsl:element>
+				</xsl:for-each>
+			</replace>
+		</rules>
+		
+		<!-- Forms -->
+		<rules css:if-content="body.portaltype-formfolder">
+			<replace css:theme="#content-placeholder" css:if-content="" css:content-children=".pfg-form" />
+			<before css:theme="#content-placeholder" css:if-content="" css:content-children=".kssattr-atfieldname-formPrologue" />
+			<after css:theme="#content-placeholder" css:if-content="" css:content-children=".kssattr-atfieldname-formEpilogue" />
+			<drop css:content=".required" />
+			<drop css:content=".fieldErrorBox" />
+			<drop css:content=".field span:first-child" />
+			<drop css:content=".ArchetypesSelectionWidget span br" />
+		</rules>
+		
+		<!-- Thank you pages -->
+		<rules css:if-content="body.portaltype-formthankspage">
+			<drop css:theme="#content h1" />
+			<drop css:content=".portalMessage" />
+			<drop css:content="#plone-document-byline" />
+			<drop css:content=".visualClear" />
+			<drop css:content=".documentActions" />
+			<replace css:theme="#content-placeholder" css:content-children="#content" />
+		</rules>
+		
+		<!-- Messages -->
+		<rules css:if-content=".portalMessage">
+			<drop css:content="#kssPortalMessage" />
+			<drop css:content=".portalMessage.info" />
+			<copy attributes="class" css:theme=".message-container" css:content=".portalMessage" />
+			<replace css:theme="#message-placeholder" css:content-children=".portalMessage.error dd" />
+		</rules>
+		
+		<!-- Subnavigation -->
+		<replace css:theme-children="#subnavigation">
+			<xsl:element name="ul">
+				<xsl:attribute name="class">basement</xsl:attribute>
+				<xsl:for-each css:select=".navTreeLevel0 > li">
+					<xsl:element name="li">
+						<xsl:if test="(contains(ul/@class,'navTree'))">
+							<xsl:attribute name="class">has-children</xsl:attribute>
+						</xsl:if>
+						<xsl:element name="a">
+							<xsl:if test="contains(@class,'navTreeItemInPath')">
+								<xsl:attribute name="class">in-path</xsl:attribute>
+							</xsl:if>
+							<xsl:if test="contains(@class,'navTreeCurrentNode')">
+								<xsl:attribute name="class">current</xsl:attribute>
+							</xsl:if>
+							<xsl:attribute name="href">
+								<xsl:value-of select="a/@href" />
+							</xsl:attribute>
+							<xsl:attribute name="title">
+								<xsl:value-of select="a/@title" />
+							</xsl:attribute>
+							<xsl:copy-of select="a/span/text()" />
+						</xsl:element>
+						<xsl:if test="(contains(ul/@class,'navTree'))">
+							<xsl:element name="ul">
+								<xsl:attribute name="class">first-floor</xsl:attribute>
+								<xsl:for-each css:select=".navTreeLevel1 > li">
+									<xsl:element name="li">
+										<xsl:if test="(contains(ul/@class,'navTree'))">
+											<xsl:attribute name="class">has-children</xsl:attribute>
+										</xsl:if>
+										<xsl:element name="a">
+											<xsl:if test="contains(@class,'navTreeItemInPath')">
+												<xsl:attribute name="class">in-path</xsl:attribute>
+											</xsl:if>
+											<xsl:if test="contains(@class,'navTreeCurrentNode')">
+												<xsl:attribute name="class">current</xsl:attribute>
+											</xsl:if>
+											<xsl:attribute name="href">
+												<xsl:value-of select="a/@href" />
+											</xsl:attribute>
+											<xsl:attribute name="title">
+												<xsl:value-of select="a/@title" />
+											</xsl:attribute>
+											<xsl:copy-of select="a/span/text()" />
+										</xsl:element>
+										<xsl:if test="(contains(ul/@class,'navTree'))">
+											<xsl:element name="ul">
+												<xsl:attribute name="class">second-floor</xsl:attribute>
+												<xsl:for-each css:select=".navTreeLevel2 > li">
+													<xsl:element name="li">
+														<xsl:if test="(contains(ul/@class,'navTree'))">
+															<xsl:attribute name="class">has-children</xsl:attribute>
+														</xsl:if>
+														<xsl:element name="a">
+															<xsl:if test="contains(@class,'navTreeItemInPath')">
+																<xsl:attribute name="class">in-path</xsl:attribute>
+															</xsl:if>
+															<xsl:if test="contains(@class,'navTreeCurrentNode')">
+																<xsl:attribute name="class">current</xsl:attribute>
+															</xsl:if>
+															<xsl:attribute name="href">
+																<xsl:value-of select="a/@href" />
+															</xsl:attribute>
+															<xsl:attribute name="title">
+																<xsl:value-of select="a/@title" />
+															</xsl:attribute>
+															<xsl:copy-of select="a/span/text()" />
+														</xsl:element>
+														<xsl:if test="(contains(ul/@class,'navTree'))">
+														<xsl:element name="ul">
+															<xsl:attribute name="class">third-floor</xsl:attribute>
+															<xsl:for-each css:select=".navTreeLevel3 > li">
+																<xsl:element name="li">
+																	<xsl:element name="a">
+																		<xsl:if test="contains(@class,'navTreeCurrentNode')">
+																			<xsl:attribute name="class">current</xsl:attribute>
+																		</xsl:if>
+																		<xsl:attribute name="href">
+																			<xsl:value-of select="a/@href" />
+																		</xsl:attribute>
+																		<xsl:attribute name="title">
+																			<xsl:value-of select="a/@title" />
+																		</xsl:attribute>
+																		<xsl:copy-of select="a/span/text()" />
+																	</xsl:element>
+																</xsl:element>
+															</xsl:for-each>
+														</xsl:element>
+													</xsl:if>
+													</xsl:element>
+												</xsl:for-each>
+											</xsl:element>
+										</xsl:if>
+									</xsl:element>
+								</xsl:for-each>
+							</xsl:element>
+						</xsl:if>
+					</xsl:element>
+				</xsl:for-each>
+			</xsl:element>
+		</replace>
+		<!-- Subnavigation -->
+	
+	<!-- Interior page rules -->
+	</rules>
+
+</rules>
