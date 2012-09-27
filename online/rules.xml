@@ -10,15 +10,9 @@
 	<drop content="p[not(*) and (not(normalize-space()) or text() = '&#160;')]" />
 	
 	<!-- No custom theme for admin pages -->
-	<notheme if-path="acl_users prefs_install_products_form portal_factory edit portal_registry @@discussion-settings login login_form logged_out @@manage-portlets select_default_page delete_confirmation solgemafullcalendarevents @@plone-upgrade" />
+	<notheme if-path="acl_users prefs_install_products_form portal_factory edit portal_registry @@discussion-settings login login_form logged_out @@manage-portlets select_default_page delete_confirmation solgemafullcalendarevents @@plone-upgrade @@new-user @@usergroup-groupdetails @@localcss-settings @@typekit-settings plonelink source_editor.htm ploneimage.htm anchor.htm table.htm attributes.htm searchreplace.htm" />
 	<notheme css:if-content="#edit-bar" if="$preview_mode != 'True'" />
-	<notheme css:if-content="#edit-bar" />
 	<notheme css:if-content=".warning" />
-	<notheme if-path="source_editor.htm" />
-	<notheme if-path="ploneimage.htm"/>
-	<notheme if-path="anchor.htm" />
-	<notheme if-path="table.htm" />
-	<notheme if-path="attributes.htm" />
 	<notheme css:if-content="body[class*=controlpanel]" />
 	<notheme css:if-content="body[class*=atct_edit]" />
 	<notheme css:if-content="body[class*=folder_rename_form]" />
