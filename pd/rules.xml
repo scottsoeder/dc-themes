@@ -86,7 +86,14 @@
 						<xsl:value-of select="div[1]/table/tbody/tr[2]/td" />
 					</xsl:element>
 					<xsl:copy-of select="div[2]" />
-					<xsl:copy-of select="p" />
+					<xsl:element name="p">
+						<xsl:element name="a">
+							<xsl:attribute name="href">
+								<xsl:value-of select="p/a/@href" />
+							</xsl:attribute>
+							<xsl:text disable-output-escaping="yes">More information about this seminar<![CDATA[&hellip;]]></xsl:text>
+						</xsl:element>
+					</xsl:element>
 					<xsl:element name="hr" />
 					<xsl:element name="p">
 						<xsl:attribute name="class">align-center</xsl:attribute>
