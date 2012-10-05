@@ -81,6 +81,24 @@ $(document).ready(function(){
 			pause:1
 		});
 	});
+	
+	// Payment option
+	$('.courses .btn').click(function(e){
+		e.preventDefault();
+		var course = $(this);
+		var register = $('#register');
+		if(register.length){register.remove();}
+		$('body').append(
+			'<div class="hidden" id="register">' +
+			'	<ul>' +
+			'		<li><a href="' + course.attr('href') + '">Pay by Credit Card</a></li>' +
+			'		<li><a href="../companybilling?' + course.data('alt') + '">Bill My Company</a></li>' +
+			'		<li><a href="../payrolldeduction?' + course.data('alt') + '">UofL Payroll Deduction</a></li>' +
+			'	</ul>' +
+			'</div>'
+		);
+		$.fancybox($('#register'));
+	});
 
 	// Toggle navigation on mobile
 	$('#toggle-navigation').click(function(e){
