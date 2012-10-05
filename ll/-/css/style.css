@@ -449,6 +449,21 @@ a.btn {
 	-o-user-select:none;
 	user-select:none;
 }
+#payment-method ul li a {
+	display:block;
+	border:1px solid #C2D1D3;
+	background:#F6F8F8;
+	background:rgba(194, 209, 211, 0.15);
+	padding:20px;
+	text-align:center;
+	font-size:24px;
+	margin:10px 0;
+	color:#333;
+}
+#payment-method ul li a:hover {
+	background:#DDE4E5;
+	background:rgba(194, 209, 211, 0.5);
+}
 .icon {
 	font-family:'Pictos';
 	font-size:15px;
@@ -1258,6 +1273,17 @@ li.has-children ul li a.current,li.has-children ul li a.in-path {
 	border:1px solid #C2D1D3;
 	margin:10px 0;
 }
+.tag {
+	display:block;
+	border:1px solid #C2D1D3;
+	background:#F6F8F8;
+	background:rgba(194, 209, 211, 0.15);
+	padding:20px;
+	text-align:center;
+	font-size:24px;
+	margin:10px 0;
+	color:#333;
+}
 .align-left {
 	text-align:left;
 }
@@ -1406,6 +1432,9 @@ li.has-children ul li a.current,li.has-children ul li a.in-path {
 	------------------------- */
 	hr {
 		width:75%;
+	}
+	#payment-method ul li a {
+		font-size:18px;
 	}
 	
 	

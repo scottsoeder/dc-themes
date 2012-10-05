@@ -2,8 +2,8 @@ $(document).ready(function(){
 
 	// Move around field help
 	$('.formHelp').each(function(e){
-		var help   = $(this).html(),
-			parent = $(this).parent().attr('id');
+		var help   = $(this).html();
+		var	parent = $(this).parent().attr('id');
 		$(this).remove();
 		$('#' + parent).append('<div class="form-help">' + help + '</div>');
 	});
@@ -44,7 +44,7 @@ $(document).ready(function(){
 	});
 
 	// Track outbound and download links
-	$('a:not(.video-gallery li a,.gallery li a,.scroll,.popup)').click(function(){
+	$('a:not(.video-gallery li a,.gallery li a,.scroll,.popup,.courses .btn)').click(function(){
 		if(this.hostname !== '' && this.hostname.toLowerCase().indexOf(location.hostname) === -1 && this.hostname.toLowerCase().indexOf('louisville.edu') === -1){
 			recordOutboundLink(this, 'Outbound Link', $(this).attr('href'), 'Outbound Link');
 		} else if(checkURLforfiletype(this.pathname)){
@@ -81,11 +81,28 @@ $(document).ready(function(){
 			pause:1
 		});
 	});
+	
+	// Payment option
+	$('.courses .btn').click(function(e){
+		var course = $(this);
+		var method = $('#payment-method');
+		if(method.length){method.remove();}
+		$('body').append(
+			'<div class="hidden" id="payment-method">' +
+			'	<ul>' +
+			'		<li><a href="' + course.attr('href') + '">Pay by Credit Card</a></li>' +
+			'		<li><a href="../payrolldeduction?' + course.data('alt') + '">UofL Payroll Deduction</a></li>' +
+			'	</ul>' +
+			'</div>'
+		);
+		$.fancybox($('#payment-method'));
+		e.preventDefault();
+	});
 
 	// Toggle navigation on mobile
 	$('#toggle-navigation').click(function(e){
-		e.preventDefault();
 		$('#navigation').slideToggle();
+		e.preventDefault();
 	});
 
 	// Popup support
@@ -93,11 +110,11 @@ $(document).ready(function(){
 	
 	// Hash Popup
 	$('.popup-hash').click(function(e){
-	   e.preventDefault();
-	   var a    = new Tanchor($(this).attr('href'));
-	   var href = a.hash();
-	   var data = $(href).html();
-	   $.fancybox(data,{maxWidth:800});
+		var a    = new Tanchor($(this).attr('href'));
+		var href = a.hash();
+		var data = $(href).html();
+		$.fancybox(data,{maxWidth:800});
+		e.preventDefault();
 	});
 
 	// Popup image gallery
@@ -113,19 +130,18 @@ $(document).ready(function(){
 
 	// Video gallery
 	$('.video-gallery li a').click(function(e){
-		e.preventDefault();
-		var placeholder = $(this).parents().filter('ul').prev('.video-placeholder'),
-					 id = $(this).attr('href').replace('http://www.youtube.com/watch?v=',''),
-				  video = '<iframe width="670" height="370" src="http://www.youtube.com/embed/_ID_?rel=0&amp;hd=1&amp;wmode=transparent&amp;theme=light" frameborder="0" allowfullscreen></iframe>'.replace('_ID_',id);
+		var placeholder = $(this).parents().filter('ul').prev('.video-placeholder');
+		var id			= $(this).attr('href').replace('http://www.youtube.com/watch?v=','');
+		var video		= '<iframe width="670" height="370" src="http://www.youtube.com/embed/_ID_?rel=0&amp;hd=1&amp;wmode=transparent&amp;theme=light" frameborder="0" allowfullscreen></iframe>'.replace('_ID_',id);
 		placeholder.html(video).fitVids();
 		$('.current-video').removeClass('current-video');
 		$(this).addClass('current-video');
 		$('html,body').animate({scrollTop:placeholder.offset().top - 20},'slow');
+		e.preventDefault();
 	});
 
 	// Toggle tabs
 	$('.tab').click(function(e){
-		e.preventDefault();
 		var text = $(this).next('.text');
 		if(text.is(':visible')){
 			text.slideUp();
@@ -134,6 +150,7 @@ $(document).ready(function(){
 			text.slideDown();
 			$(this).children('img').rotate({animateTo:180});
 		}
+		e.preventDefault();
 	});
 
 	// Fix Plone's copyright year
@@ -146,9 +163,9 @@ $(document).ready(function(){
 
 // Show/hide scroll arrow
 function scroll_update(){
-	var style = $('#toggle-navigation').css('display'),
-		position = $(window).scrollTop(),
-		arrow	 = $('#back-to-top');
+	var style	 = $('#toggle-navigation').css('display');
+	var position = $(window).scrollTop();
+	var arrow	 = $('#back-to-top');
 	if(position >= 300 && style != 'block'){
 		arrow.fadeIn();
 	} else{
