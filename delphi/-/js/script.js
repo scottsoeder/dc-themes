@@ -7,9 +7,6 @@ $(document).ready(function(){
 		$(this).remove();
 		$('#' + parent).append('<div class="form-help">' + help + '</div>');
 	});
-	
-	// Fix back-to-top hash
-	$('#back-to-top').attr('href','#');
 
 	// Animate search box on focus/blur
 	$('#search').focus(function(){
@@ -26,9 +23,6 @@ $(document).ready(function(){
 		}
 	});
 
-	// Hide content
-	$('.hidden,ul.toggle-tabs .text').hide();
-
 	// Scaled videos
 	$('body').fitVids();
 
@@ -37,8 +31,11 @@ $(document).ready(function(){
 
 	// Placeholder support for IE/FF
 	$('textarea,input').addPlaceholder();
+	
+	// Fix blank hrefs
+	$('#back-to-top,#toggle-navigation').attr('href','#');
 
-	// Block hash links
+	// Block blank hrefs
 	$('a[href="#"]').click(function(e){
 		e.preventDefault();
 	});
