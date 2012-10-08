@@ -83,17 +83,20 @@ $(document).ready(function(){
 	$('.courses .btn').click(function(e){
 		var course = $(this);
 		var method = $('#payment-method');
-		if(method.length){method.remove();}
-		$('body').append(
-			'<div class="hidden" id="payment-method">' +
-			'	<ul>' +
-			'		<li><a href="' + course.attr('href') + '">Pay by Credit Card</a></li>' +
-			'		<li><a href="../payrolldeduction?' + course.data('alt') + '">UofL Payroll Deduction</a></li>' +
-			'	</ul>' +
-			'</div>'
-		);
-		$.fancybox($('#payment-method'));
-		e.preventDefault();
+		if(course.data('alt').length){
+			if(method.length){method.remove();}
+			$('body').append(
+				'<div class="hidden" id="payment-method">' +
+				'	<ul>' +
+				'		<li><a href="' + course.attr('href') + '">Pay by Credit Card</a></li>' +
+				'		<li><a href="../companybilling?' + course.data('alt') + '">Bill My Company</a></li>' +
+				'		<li><a href="../payrolldeduction?' + course.data('alt') + '">UofL Payroll Deduction</a></li>' +
+				'	</ul>' +
+				'</div>'
+			);
+			$.fancybox($('#payment-method'));
+			e.preventDefault();
+		}
 	});
 
 	// Toggle navigation on mobile
