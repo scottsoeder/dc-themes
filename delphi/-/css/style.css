@@ -1698,7 +1698,7 @@ li.has-children ul li a.current,li.has-children ul li a.in-path {
 	}
 	#navigation li a {
 		display:block;
-		padding:20px 13px 15px;
+		padding:20px 13px 16px;
 		width:auto;
 		background:#FFF url(../img/li-border.png) no-repeat bottom right;
 	}
