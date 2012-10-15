@@ -43,9 +43,9 @@ $(document).ready(function(){
 	// Track outbound and download links
 	$('a:not(.video-gallery li a,.gallery li a,.scroll,.popup)').click(function(){
 		if(this.hostname !== '' && this.hostname.toLowerCase().indexOf(location.hostname) === -1 && this.hostname.toLowerCase().indexOf('louisville.edu') === -1){
-			recordOutboundLink(this, 'Outbound Link', $(this).attr('href'), 'Outbound Link');
+			trackLink(this, 'Outbound Link', $(this).attr('href'), 'Outbound Link');
 		} else if(checkURLforfiletype(this.pathname)){
-			recordOutboundLink(this, 'File Download', $(this).attr('href'), 'File Download');
+			trackLink(this, 'File Download', $(this).attr('href'), 'File Download');
 		}
 	});
 
@@ -67,6 +67,12 @@ $(document).ready(function(){
 		function(){$('.flex-direction-nav').fadeIn();},
 		function(){$('.flex-direction-nav').fadeOut();}
 	);
+	
+	// Track feature banner links
+	$('#home .slides a').click(function(e){
+		var file = $(this).children('img').attr('src').replace('-/images/home/','');
+		trackLink(this, 'Home Page Banner', file, 'Click');
+	});
 
 	// Load ticker
 	$('#ticker-inner').load('http://delphiserver.louisville.edu/forms/ticker/list.php',function(){
@@ -167,8 +173,8 @@ function publishAd(content){
 	}
 }
 
-// Tracking outbound links in GA
-function recordOutboundLink(link, category, action, opt_label){
+// Tracking outbound and feature links in GA
+function trackLink(link, category, action, opt_label){
 	_gat._getTrackerByName()._trackEvent(category, action, opt_label);
 	setTimeout('document.location = "' + link.href + '"', 100);
 }
