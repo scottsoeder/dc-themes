@@ -95,8 +95,8 @@ $(document).ready(function(){
 				'<div class="hidden" id="payment-method">' +
 				'	<ul>' +
 				'		<li><a href="' + course.attr('href') + '">Pay by Credit Card</a></li>' +
-				'		<li><a href="../companybilling?' + course.data('alt') + '">Bill My Company</a></li>' +
-				'		<li><a href="../payrolldeduction?' + course.data('alt') + '">UofL Payroll Deduction</a></li>' +
+				'		<li><a href="../../companybilling?' + course.data('alt') + '">Bill My Company</a></li>' +
+				'		<li><a href="../../payrolldeduction?' + course.data('alt') + '">UofL Payroll Deduction</a></li>' +
 				'	</ul>' +
 				'</div>'
 			);
