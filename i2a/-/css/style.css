@@ -1301,6 +1301,12 @@ li.has-children ul li a.current,li.has-children ul li a.in-path {
 	color:#5B6F7B;
 	font-weight:normal;
 }
+.subtitle a, .subtitle a:visited {
+	color:#333;
+}
+.subtitle a:hover,.subtitle a:focus,.subtitle a:active {
+	color:#5B6F7B;
+}
 .mini-subtitle {
 	color:#666;
 	font-size:13px;

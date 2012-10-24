@@ -1,0 +1,272 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"complet",
+				"completed_modules"
+			],
+			[
+				"if",
+				"ife	if … else"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"selected_items":
+		[
+			[
+				"syn htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"syntax htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"sy ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"syh",
+				"Set Syntax: HTML"
+			],
+			[
+				"snip",
+				"Snippet: html"
+			],
+			[
+				"syht",
+				"Set Syntax: HTML"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"syn hm",
+				"Set Syntax: HTML"
+			],
+			[
+				"Snippet: ",
+				"Snippet: message"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			]
+		],
+		"width": 476.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/kenton/Desktop/blog-post",
+		"/Users/kenton/Dropbox/Documents/Files/kenton.zsh-theme",
+		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/Tag/Tag Package.sublime-settings",
+		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/User/Tag Package.sublime-settings",
+		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/Base File.sublime-settings",
+		"/Volumes/Sites/Default/gps/post.php",
+		"/Volumes/Sites/Default/gps/list.php",
+		"/Users/kenton/Desktop/Celebration Pages",
+		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/Terminal/Terminal.sublime-settings",
+		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/Terminal/Default (OSX).sublime-keymap",
+		"/Volumes/Sites/Default/gps/.git/COMMIT_EDITMSG",
+		"/Volumes/Sites/Default/gps/GPS.sublime-project",
+		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/User/HTML/message.sublime-snippet",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/-/css/style.css",
+		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/kenton/Desktop/test.js",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/.gitignore",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/online/templates/blank.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/online/manifest.cfg"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"blog-post",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"’",
+			"'",
+			"“",
+			"’",
+			"”",
+			"<p>",
+			"’",
+			"How",
+			"div",
+			"/>\n",
+			"push",
+			"_gaq",
+			"_gaq.push"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"&rsquo;",
+			"\"",
+			"'",
+			"\"",
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"li",
+				"list.php"
+			],
+			[
+				"",
+				"list.php"
+			],
+			[
+				"pos",
+				"post.php"
+			],
+			[
+				"css",
+				"cs/-/css/style.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
