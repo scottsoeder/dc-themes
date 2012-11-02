@@ -1,0 +1,47 @@
+img, .map {
+	display: block;
+	margin: 15px 0;
+	padding: 1%;
+	max-width: 98%;
+	border: 1px solid #DDD;
+	@include single-box-shadow(rgba(0,0,0,0.075), 0, 1px, 1px);
+}
+
+.left-image,.image-left {
+	float: left;
+	margin: 10px 10px 10px 0;
+}
+
+.right-image,.image-right {
+	float: right;
+	margin: 10px 0 10px 10px;
+}
+
+a img:hover {
+	border-color: #999;
+	@include single-box-shadow(rgba(0,0,0,0.25), 0, 1px, 4px);
+}
+
+#logo img, #logo a img:hover, .plain, a img.plain:hover {
+	border: none;
+	@include single-box-shadow(none);
+}
+
+#logo img {
+	margin: 0;
+	padding: 0;
+}
+
+.video, .video-placeholder {
+	max-width: 100%;
+	border: 1px solid #DDD;
+	@include single-box-shadow(rgba(0,0,0,0.075), 0, 1px, 1px);
+}
+
+.video {
+	margin-bottom: 10px;
+}
+
+.video-placeholder {
+	margin-bottom: 0;
+}

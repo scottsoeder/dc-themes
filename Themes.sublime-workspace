@@ -19,7 +19,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 127.0,
+		"height": 137.0,
 		"selected_items":
 		[
 			[
@@ -27,11 +27,23 @@
 				"Set Syntax: HTML"
 			],
 			[
-				"syntax htm",
-				"Set Syntax: HTML"
+				"syn sas",
+				"Set Syntax: Sass"
 			],
 			[
 				"syn ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"sy htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"syntax htm",
 				"Set Syntax: HTML"
 			],
 			[
@@ -95,7 +107,7 @@
 				"View: Toggle Side Bar"
 			]
 		],
-		"width": 476.0
+		"width": 462.0
 	},
 	"console":
 	{
@@ -112,6 +124,77 @@
 	},
 	"file_history":
 	[
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/weddings/templates/campaign.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/weddings/-/scss/_content.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/pd/templates/campaign.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/pd/-/scss/_content.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/ll/templates/campaign.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/ll/-/scss/_content.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/i2a/templates/campaign.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/-/scss/_content.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/delphi/-/scss/_content.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/i2a/-/scss/_content.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/delphi/templates/campaign.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/templates/campaign.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/ll/templates/blank.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/ll/templates/calendar.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/ll/templates/page.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/ll/templates/home.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/-/js/script.js",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/ll/-/js/script.js",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/-/scss/_homepage.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/ll/-/scss/_homepage.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/ll/-/scss/_forms.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/pd/templates/blank.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/pd/templates/calendar.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/pd/templates/event.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/pd/templates/home.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/pd/templates/page.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/pd/-/js/script.js",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/pd/-/scss/_homepage.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/pd/-/scss/_forms.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/weddings/templates/blank.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/weddings/templates/calendar.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/weddings/templates/home.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/weddings/templates/page.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/weddings/-/js/script.js",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/weddings/scss/_forms.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/weddings/scss/style.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/delphi/-/scss/_homepage.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/i2a/-/scss/_homepage.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/i2a/-/scss/_media.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/i2a/templates/calendar.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/i2a/templates/home.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/i2a/templates/page.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/i2a/templates/blank.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/i2a/-/js/script.js",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/i2a/-/scss/_forms.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/delphi/templates/page.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/delphi/templates/login.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/delphi/templates/home.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/delphi/templates/calendar.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/delphi/templates/blank.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/delphi/-/js/script.js",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/delphi/-/scss/_forms.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/Themes.sublime-project",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/-/scss/_forms.scss",
+		"/Users/kenton/Desktop/idrive.txt",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/-/scss/_media.scss",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/templates/blank.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/templates/event.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/templates/home.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/templates/page.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/templates/calendar.html",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/-/css/style.css",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/-/css/calendar.css",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/online/-/js/script.js",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/delphi/-/css/style.css",
+		"/Users/kenton/Dropbox/shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/.git/COMMIT_EDITMSG",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/i2a/-/css/style.css",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/ll/-/css/style.css",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/online/-/css/style.css",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/pd/-/css/style.css",
+		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/weddings/-/css/style.css",
 		"/Users/kenton/Desktop/blog-post",
 		"/Users/kenton/Dropbox/Documents/Files/kenton.zsh-theme",
 		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
@@ -127,7 +210,6 @@
 		"/Volumes/Sites/Default/gps/.git/COMMIT_EDITMSG",
 		"/Volumes/Sites/Default/gps/GPS.sublime-project",
 		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/User/HTML/message.sublime-snippet",
-		"/Users/kenton/Dropbox/Shared/Delphi Center/Active Projects/DCWEB000_Website-Redesign/Themes/cs/-/css/style.css",
 		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/kenton/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/kenton/Desktop/test.js",
@@ -144,6 +226,9 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"<open files>",
+			"",
+			"untitled",
 			"",
 			"blog-post",
 			""
@@ -154,6 +239,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"&mdash;",
+			"@mdash;",
 			"’",
 			"'",
 			"“",
@@ -174,6 +261,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"&ndash;",
+			"@ndash;",
 			"'",
 			"&rsquo;",
 			"\"",
@@ -237,6 +326,42 @@
 		"selected_items":
 		[
 			[
+				"sc",
+				"delphi/-/js/script.js"
+			],
+			[
+				"csme",
+				"cs/-/scss/_media.scss"
+			],
+			[
+				"cshome",
+				"cs/-/scss/_homepage.scss"
+			],
+			[
+				"scri",
+				"weddings/-/js/script.js"
+			],
+			[
+				"sci",
+				"online/-/js/script.js"
+			],
+			[
+				"delphi",
+				"delphi/-/css/style.css"
+			],
+			[
+				"style",
+				"weddings/-/css/style.css"
+			],
+			[
+				"sty",
+				"cs/-/css/style.css"
+			],
+			[
+				"delphicss",
+				"delphi/-/css/style.css"
+			],
+			[
 				"li",
 				"list.php"
 			],
@@ -257,16 +382,20 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/Volumes/Sites/Default/gps/GPS.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 150.0,
 	"status_bar_visible": true
 }

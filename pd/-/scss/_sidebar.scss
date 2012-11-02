@@ -1,0 +1,84 @@
+#sidebar {
+	@include breakpoint(handheld) {
+		padding-bottom: 15px;
+		border-top: 2px solid #F2F2F2;
+	}
+	@include breakpoint(tablet) {
+		float: left;
+		width: 24%;
+	}
+	@include breakpoint(desktop) {
+		float: left;
+		width: 243px;
+	}
+}
+
+#subnavigation ul {
+	li a {
+		display: block;
+		color: #333;
+		&:visited {
+			display: block;
+			color: #333;
+		}
+		&:hover, &:active, &:focus { color: #AD0000; }
+	}
+	li.has-children {
+		> a { border-bottom: 1px solid #F2F2F2; }
+		ul li a {
+			&.current, &.in-path { margin-left: -2px; }
+		}
+	}
+	&.basement li {
+		a {
+			padding: 10px;
+			border-top: 1px solid #F2F2F2;
+			font-size: 14px;
+			line-height: 19px;
+		}
+		&:first-child a { border-top: none; }
+		a {
+			&.current, &.in-path {
+				border-left: 2px solid #AD0000;
+				color: #333;
+				font-weight: 600;
+			}
+		}
+	}
+	&.first-floor, &.second-floor, &.third-floor {
+		margin: 10px 0 10px 13px;
+		border-left: 2px solid #F2F2F2;
+	}
+	&.first-floor li a, &.second-floor li a, &.third-floor li a {
+		padding: 6px;
+		border-top: 0;
+		font-size: 12px;
+		line-height: 17px;
+	}
+}
+
+#ad-block {
+	display: none;
+	margin: 15px auto 10px;
+	padding: 5px 10px;
+	width: 80%;
+	border: 1px solid #F1F1F1;
+	background: #F9F9F9;
+	@include breakpoint(desktop) { width: 200px; }
+}
+
+.ad {
+	h2 a {
+		color: #333;
+		&:visited { color: #333;
+		}
+		&:hover, &:active, &:focus { color: #AD0000; }
+	}
+	img {
+		margin: 0 0 5px -5px !important;
+		padding: 4px;
+		max-width: 100%;
+		border: 1px solid #DDD;
+		@include single-box-shadow(rgba(0, 0, 0, 0.075), 0, 1px, 1px);
+	}
+}

@@ -1,0 +1,221 @@
+#home {
+	h3 {
+		margin-bottom: 10px;
+		color: #333;
+		text-shadow: 0 1px 0 #FFF;
+		font-size: 21px;
+		line-height: 26px;
+		a {
+			margin-bottom: 10px;
+			color: #333;
+			@include single-text-shadow(0, 1px, 0, 0, #FFF);
+			text-shadow: 0 1px 0 #FFF;
+			font-size: 21px;
+			line-height: 26px;
+			&:visited, &:hover, &:focus, &:active {
+				margin-bottom: 10px;
+				color: #333;
+				@include single-text-shadow(0, 1px, 0, 0, #FFF);
+				font-size: 21px;
+				line-height: 26px;
+			}
+		}
+	}
+	img,a img:hover {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		@include single-box-shadow(none);
+	}
+	.flex-container { margin: 15px 0 35px; }
+}
+
+#content .flex-container { margin: 15px 0 30px; }
+
+.flexslider {
+	border: 0;
+	background: transparent;
+}
+
+#home .slides li {
+	@include single-box-shadow(#999, 0, 0, 1px);
+	img,a img:hover {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		@include single-box-shadow(none);
+	}
+}
+
+#content .slides li img {
+	float: none;
+	margin: 0;
+	border: none;
+	@include single-box-shadow(none);
+}
+
+.flex-direction-nav {
+	display: none;
+	li {
+		a { margin-top: -30px; }
+		.next {
+			right: 15px;
+			background-position: -52px 0;
+		}
+		.prev { left: 15px; }
+	}
+}
+
+.flex-caption {
+	bottom: -10px;
+	padding: 2.1%;
+	p {
+		margin: 0;
+		color: #FFF;
+		@include single-text-shadow(0, -1px, 0, 0, rgba(0, 0, 0, 0.3));
+	}
+	a {
+		color: #DDD;
+		&:visited { color: #DDD; }
+		&:hover, &:active, &:focus { color: #FFF; }
+	}
+}
+
+#promo-container { margin: 20px 0 0; }
+
+.promo {
+	border-right: 1px solid #CCC;
+	border-left: 1px solid #F5F5F5;
+	p { @include single-text-shadow(0, 1px, 0, 0,#FFF);	}
+	img {
+		position: relative;
+		z-index: 0;
+		max-width: 100%;
+		border: 0;
+		&.left-image { float: left; }
+		&.right-image { float: right; }
+	}
+	@include breakpoint(handheld){
+		float: none;
+		margin: 0 auto;
+		padding: 10px 0;
+		width: 90%;
+		height: auto;
+		border: 0;
+		border-top: 1px solid #F5F5F5;
+		border-bottom: 1px solid #CCC;
+		&:first-child {
+			border-top: 0;
+		}
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+	@include breakpoint(tablet) {
+		float: left;
+		padding: 0 2%;
+		width: 30%;
+		height: 250px;
+		&:first-child {
+			padding-left: 0;
+			border-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+			border-right: 0;
+		}
+	}
+	@include breakpoint(desktop) {
+		float: left;
+		padding: 0 20px;
+		width: 292px;
+		height: 225px;
+		&:first-child {
+			padding-left: 0;
+			border-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+			border-right: 0;
+		}
+	}
+}
+
+#calendar-icon-svg {
+	width: 90px;
+	height: 90px;
+}
+
+.caption {
+	position: relative;
+	left: 0;
+	z-index: 1;
+	background: #000;
+	background: rgba(0, 0, 0, 0.5);
+	color: #FFF;
+	font-weight: 600;
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+	@include breakpoint(handheld){
+		bottom: 40px;
+		padding: 2% 4%;
+		width: 92%;
+		font-size: 12px;
+		line-height: 22px;
+		span { font-size: 16px; }
+	}
+	@include breakpoint(tablet) {
+		bottom: 32px;
+		padding: 2% 4%;
+		width: 92%;
+		font-size: 12px;
+		line-height: 22px;
+		span { font-size: 16px; }
+	}
+	@include breakpoint(desktop) {
+		bottom: 32px;
+		padding: 4px 8px;
+		width: 276px;
+		font-size: 16px;
+		line-height: 22px;
+		span { font-size: 22px; }
+	}
+}
+
+#ticker {
+	margin: 0 auto 5px;
+	padding: 10px;
+	background: #FFF;
+	@include single-box-shadow(#999, 0, 0, 1px, 1px);
+	@include breakpoint(tablet) { margin-top: 20px; }
+	@include breakpoint(desktop) { margin-top: 20px; }
+}
+
+#ticker-inner { max-width: 100%; }
+
+#ticker {
+	p { margin: 0; }
+	h4 { padding: 0 0 5px 0; }
+	ul {
+		float: right;
+		@include breakpoint(handheld){ display:none; }
+		li {
+			&:last-child { margin-top: 10px; }
+			a {
+				padding: 0 4px 2px;
+				outline: 0;
+				border: 1px solid #900;
+				background: #C00;
+				@include background(linear-gradient(top,#E60000,#CC0000));
+				@include single-box-shadow(rgba(255, 255, 255, 0.75), 0, 1px, 6px, 0, true);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E60000', endColorstr='#CC0000', GradientType=0);
+				color: #FFF;
+				@include single-text-shadow(0, -1px, 0, 0,rgba(51, 51, 51, 0.3));
+				font-weight: 600;
+				font-size: 10px;
+				font-family: Pictos;
+				cursor: pointer;
+			}
+		}
+	}
+}

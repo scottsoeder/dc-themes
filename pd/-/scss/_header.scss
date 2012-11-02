@@ -1,0 +1,253 @@
+#header {
+	position: relative;
+	z-index: 1;
+	background: #FFF;
+	@include single-box-shadow(#999, 0, 1px, 1px);
+}
+
+#logo {
+	float: left;
+	background-size: 150px 36px;
+	@include breakpoint(mobile-menu) { margin: 10px 0 4px; }
+	@include breakpoint(tablet) { margin: 10px 0 8px; }
+	@include breakpoint(desktop) { margin: 25px 0 16px; }
+}
+
+
+#toggle-navigation {
+	@include breakpoint(mobile-menu) {
+		position: absolute;
+		top: 13px;
+		right: 5px;
+		display: block !important;
+	}
+	@include breakpoint(tablet) {
+		display: none;
+	}
+	@include breakpoint(desktop) {
+		display: none;
+	}
+}
+#navigation {
+	@include breakpoint(mobile-menu) {
+		position: absolute;
+		top: 53px;
+		right: 0;
+		display: none;
+		background: #FFF;
+		-webkit-box-shadow: -1px 1px 3px #999;
+		-moz-box-shadow: -1px 1px 3px #999;
+		box-shadow: -1px 1px 3px #999;
+	}
+	@include breakpoint(tablet) {
+		float: right;
+		margin-top: 5px;
+	}
+	@include breakpoint(desktop) {
+		float: right;
+		margin-top: 35px;
+	}
+}
+
+#navigation li {
+	@include breakpoint(mobile-menu) { float: none; }
+	@include breakpoint(tablet) { float: left; }
+	@include breakpoint(desktop) { float: left; }
+	a {
+		display: block;
+		color: #333;
+		font-weight: 600;
+		font-size: 14px;
+		&:visited {
+			display: block;
+			color: #333;
+			font-weight: 600;
+			font-size: 14px;
+		}
+		&:hover, &:active, &:focus {
+			color: #AD0000;
+		}
+		@include breakpoint(mobile-menu) {
+			padding: 10px;
+			text-align: right;
+			line-height: 10px;
+		}
+		@include breakpoint(tablet) {
+			padding: 20px 8px 10px;
+			background: #FFF;
+			text-align: center;
+			line-height: 10px;
+		}
+		@include breakpoint(desktop) {
+			display: block;
+			padding: 20px 13px 16px;
+			width: auto;
+			background: #FFF url(../img/li-border.png) no-repeat bottom right;
+		}
+	}
+	&.current a {
+		color: #AD0000;
+		@include breakpoint(desktop) {
+			background: #FFF url(../img/li-current.png) no-repeat bottom right;
+		}
+	}
+	&:last-child a {
+		@include breakpoint(handheld) {
+			padding-right: 10px;
+		}
+		@include breakpoint(tablet) {
+			padding-right: 0;
+			background: #FFF;
+		}
+		@include breakpoint(desktop) {
+			padding-right: 13px;
+			background: #FFF;
+		}
+	}
+}
+
+#body {
+	position: relative;
+	z-index: 0;
+	padding: 15px 0;
+	width: 100%;
+	background: #f2f2f2 url(../img/background.png) repeat;
+}
+
+#area-name {
+	float: left;
+	color: #333;
+	@include single-text-shadow(0, 1px, 0, 0, #FFF);
+	font-weight: 600;
+	@include breakpoint(handheld) {
+		float: none;
+		margin-top: 0;
+		padding: 0;
+		text-align: center;
+	}
+	@include breakpoint(tablet) {
+		margin-top: 2px;
+		padding: 0;
+		font-size: 24px;
+	}
+	@include breakpoint(desktop) {
+		margin-top: 2px;
+		padding: 0;
+		font-size: 24px;
+	}
+	a {
+		color: #333;
+		@include single-text-shadow(0, 1px, 0, 0, #FFF);
+		font-weight: 600;
+		&:visited, &:hover, &:focus, &:active {
+			color: #333;
+			@include single-text-shadow(0, 1px, 0, 0, #FFF);
+			font-weight: 600;
+		}
+	}
+	@include breakpoint(mobile-menu) {
+		span { display: none; }
+	}
+}
+
+#site-info {
+	@include breakpoint(handheld) {
+		float:none;
+		margin:10px auto 0;
+		width:200px;
+	}
+	ul li {
+		float: left;
+		margin: 5px 15px 0 0;
+		@include breakpoint(handheld) { display: none; }
+		&:last-child {
+			margin: 0;
+			@include breakpoint(handheld) { display: block; }
+		}
+		a {
+			color: #666;
+			@include single-text-shadow(0, 1px, 0, 0, #FFF);
+			font-size: 12px;
+			line-height: 18px;
+			&:visited {
+				color: #666;
+				@include single-text-shadow(0, 1px, 0, 0, #FFF);
+				font-size: 12px;
+				line-height: 18px;
+			}
+			&.important, &:hover, &:active, &:focus {
+				color: #AD0000;
+			}
+		}
+	}
+}
+
+#search-form {
+	fieldset {
+		border: 0;
+	}
+	label {
+		display: none;
+	}
+}
+
+#search {
+	padding: 0 5px;
+	width: 100px;
+	height: 25px;
+	outline: 0;
+	border: 1px solid #CCC;
+	@include single-box-shadow(#FFF, 0, 1px, 0);
+	cursor: pointer;
+	&:focus {
+		border-color: #BFBFBF;
+	}
+	@include breakpoint(handheld) { width: 150px; }
+}
+
+#go {
+	margin-left: 5px;
+	width: 29px;
+	height: 27px;
+	outline: 0;
+	border: 0;
+	background: #AD0000 url(../img/search.png) no-repeat;
+	@include single-box-shadow(#FFF, 0, 1px, 0);
+	color: #FFF;
+	vertical-align: top;
+	text-indent: -9999px;
+	text-transform: capitalize;
+	cursor: pointer;
+	@include retina {
+		background-image: url(../img/search.png);
+		background-size: 29px 27px;
+	}
+}
+
+#back-to-top {
+ 	position: fixed;
+	top: 3px;
+	right: 3px;
+	z-index: 15;
+	display: none;
+	width: 25px;
+	height: 25px;
+	background: transparent url(../img/back-to-top.png) no-repeat;
+	text-indent: -99999px;
+}
+
+#line-callout {
+	float: right;
+	@include breakpoint(handheld) {
+		margin-top: 8px;
+		h2 {
+			font-size: 14px;
+		}
+	}
+	@include breakpoint(tablet) {
+		margin-top: 10px;
+	}
+	@include breakpoint(desktop) {
+		margin-top: 25px;
+	}
+}

@@ -1,0 +1,151 @@
+body {
+	background: #FFF;
+	color: #333;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: none;
+}
+
+a {
+	color: #AD0000;
+	text-decoration: none;
+	&:visited {
+		color: #AD0000;
+		text-decoration: none;
+	}
+	&:hover, &:active, &:focus {
+		color: #000;
+	}
+}
+
+h1 {
+	padding: 15px 10px 10px 0;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+h2 {
+	padding: 10px 10px 10px 0;
+	font-size: 19px;
+	line-height: 23px;
+	&.script {
+		padding-bottom: 5px;
+		font-size: 32px;
+		font-family: Brisa;
+		line-height: 37px;
+	}
+}
+
+h3 {
+	padding: 10px 10px 10px 0;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+h4 {
+	padding: 10px 10px 10px 0;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+h5 {
+	padding: 5px 10px 5px 0;
+	font-size: 13px;
+	line-height: 17px;
+}
+
+h6 {
+	padding: 5px 10px 5px 0;
+	font-size: 11px;
+	line-height: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+}
+
+p {
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+dl {
+	margin: 0 0 8px 28px;
+	font-size: 13px;
+	line-height: 18px;
+	&.no-indent {
+		margin-left: 0;
+	}
+}
+
+dt {
+	margin-top: 8px;
+	font-weight: 600;
+}
+
+dd {
+	margin: 3px 0;
+}
+
+blockquote {
+	margin: 20px 30px;
+	padding-left: 15px;
+	border-left: 1px solid #AD0000;
+	p {
+		font-size: 13px;
+		line-height: 18px;
+		&.author {
+			margin-bottom: 15px;
+			border-left: 0;
+			color: #AD0000;
+			font-size: 30px;
+			font-family: Brisa;
+			line-height: 35px;
+		}
+		&.author-info {
+			margin-top: -20px;
+			color: #666;
+		}
+	}
+}
+
+sup, sub, .sup, .sub {
+	position: relative;
+	height: 0;
+	vertical-align: baseline;
+	font-size: 10px;
+	line-height: 18px;
+}
+sup, .sup {
+	bottom: 1ex;
+}
+
+sub, .sub {
+	top: .5ex;
+}
+cite, .cite, em, .italic {
+	font-style: italic;
+}
+
+strong, .bold {
+	font-weight: 600;
+}
+abbr, .abbr, acronym, .acronym, dfn, .dfn {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+hr {
+ 	clear: both;
+	margin: 25px auto;
+	width: 50%;
+	height: 1px;
+	border: 0;
+	background:#DDD;
+	@include background(linear-gradient(top left,#FFF, #000, #FFF));
+	@include breakpoint(handheld){ width:75%; }
+}

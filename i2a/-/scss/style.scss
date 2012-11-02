@@ -1,0 +1,100 @@
+/*
+	Description:  Master styles other resources
+	Author:  kenton.glass@louisville.edu
+  
+	1. Resources
+	2. Fonts
+	3. General Elements
+	4. Tables
+	5. Forms
+	6. Media
+	7. Header
+	8  Homepage
+	9. Content
+   10. Sidebar
+   11. Footer
+   12. General Classes
+   14. Mobile Menu
+   15. Handheld Styles
+   16. Tablet Styles
+   17. Desktop Styles
+   18. Retina Styles
+   19. Print Styles
+  
+*/
+
+
+
+/* 1. Resources
+------------------------- */
+@import "base";
+@import "-extras/reset.css";
+@import "-extras/fancybox.css";
+@import "-extras/flexslider.css";
+
+
+
+/* 2. Fonts
+------------------------- */
+@include font-face("Pictos", font-files("pictos-web.woff","pictos-web.ttf","pictos-web.svg"), "pictos-web.eot");
+@include font-face("Brisa", font-files("brisa.woff", "brisa.ttf"), "brisa.eot");
+
+
+
+/* 3. General Elements
+------------------------- */
+@import "elements";
+
+
+
+/* 4. Tables
+------------------------- */
+@import "tables";
+
+
+
+/* 5. Forms
+------------------------- */
+@import "forms";
+
+
+
+/* 6. Media
+------------------------- */
+@import "media";
+
+
+
+/* 7. Header
+------------------------- */
+@import "header";
+
+
+
+/* 8. Homepage
+------------------------- */
+@import "homepage";
+
+
+
+/* 9. Content
+------------------------- */
+@import "content";
+
+
+
+/* 10. Sidebar
+------------------------- */
+@import "sidebar";
+
+
+
+/* 11. Footer
+------------------------- */
+@import "footer";
+
+
+
+/* 12. General Classes
+------------------------- */
+@import "classes";

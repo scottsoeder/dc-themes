@@ -63,8 +63,12 @@ $(document).ready(function(){
 	
 	// Track feature banner links
 	$('#home .slides a').click(function(e){
-		var file = $(this).children('img').attr('src').replace('-/images/home/','');
-		trackLink(this, 'Home Page Banner', file, 'Click');
+		e.preventDefault();
+		var keyword = $(this).children('img').data('keyword');
+		_gat._getTrackerByName()._trackEvent('Home Page Banner', 'Click', keyword);
+		if(!($(this).hasClass('popup-hash'))){
+			setTimeout('document.location = "' + $(this).attr('href') + '"', 100);
+		} 
 	});
 
 	// Slider

@@ -1,0 +1,214 @@
+#page {
+	margin: 15px auto 5px;
+	background: #FFF;
+	@include single-box-shadow(#999, 0, 0, 1px, 1px);
+	@include breakpoint(desktop) { width: 960px; }
+}
+
+#campaign {
+  background: #F2F2F2 url(../img/background.png) repeat;
+}
+
+#content, #campaign-content {
+	ul {
+		margin: 0 0 8px 45px;
+		list-style-type: square;
+		&.no-indent { margin-left:15px; }
+		&.page-navigation {
+			display: block;
+			float: left;
+			margin: 20px 0 8px;
+			width: 100%;
+			list-style-type: none;
+			li {
+				display: block;
+				float: left;
+				margin-bottom: 20px;
+				a {
+					padding: 10px 8px;
+					border-right: 1px solid #F1F1F1;
+					border-bottom: 1px solid #DDD;
+					background: #F7F7F7;
+					color: #333;
+					&:visited {
+						padding: 10px 8px;
+						border-right: 1px solid #F1F1F1;
+						border-bottom: 1px solid #DDD;
+						background: #F7F7F7;
+						color: #333;
+					}
+					&:hover, &:focus, &:active { background: #F1F1F1; }
+				}
+				&:last-child a {
+					border-right: none;
+					&:visited { border-right: none; }
+				}
+			}
+		}
+		&.gallery, &.video-gallery {
+			margin: 0 0 15px -8px;
+			list-style-type: none;
+		}
+		&.gallery li {
+			display: inline;
+			float: left;
+			margin: 0 0 -20px 8px;
+		}
+		&.video-gallery li {
+			display: inline;
+			float: left;
+			margin: 0 0 -20px 8px;
+			margin-top: -60px;
+			position: relative;
+			img { position: relative; }
+			a {
+				&:hover img, &.current-video img {
+					border-color: #999;
+					@include single-box-shadow(rgba(0, 0, 0, 0.25), 0, 1px, 4px);
+				}
+			}
+			.play-video {
+				top: 115px;
+				left: 75px;
+				z-index: 5;
+				float: none;
+				margin: 0;
+				padding: 0;
+				border: none;
+				@include single-box-shadow(none);
+				opacity: 0.75;
+			}
+			&:hover .play-video, a.current-video .play-video {
+				@include single-box-shadow(none);
+				opacity: 0.9;
+			}
+		}
+		&.courses, &.rooms {
+			margin: 10px 0 10px -15px !important;
+			list-style-type: none;
+		}
+		&.courses li {
+			display: block;
+			float: left;
+			padding: 10px 15px;
+			width: 190px;
+			border: 2px solid #F2F2F2;
+			border-left: 0;
+			text-align: center;
+			.btn { margin-top: 10px; }
+			&.extra { padding-bottom: 25px; }
+		}
+		&.rooms li {
+			display: block;
+			float: left;
+			padding: 10px 15px;
+			width: 190px;
+			border: 2px solid #F2F2F2;
+			border-left: 0;
+			text-align: left;
+			height:125px;
+		}
+		&.toggle-tabs {
+			margin-left: 0;
+			list-style-type: none;
+			.tab {
+				padding: 10px;
+				border-bottom: 1px solid #DDD;
+				background: #F7F7F7;
+				font-weight: 600;
+				font-size: 15px;
+				line-height: 20px;
+				cursor: pointer;
+				img.arrow {
+					float: right;
+					margin: 0;
+					padding: 0;
+					border: none;
+					@include single-box-shadow(none);
+				}
+			}
+			.text {
+				display: none;
+				margin: 10px 0 20px;
+			}
+		}
+	}
+	ol {
+		margin: 0 0 8px 45px;
+		list-style-type: decimal;
+		&.no-indent { margin-left:15px; }
+	}
+	li {
+		margin: 3px 0 10px;
+		font-size: 14px;
+		line-height: 19px;
+	}
+	.slides, .flex-control-nav, .flex-direction-nav {
+		margin: 0;
+		list-style-type: none;
+	}
+}
+
+#content {
+	padding: 0 15px 4px;
+	@include breakpoint(tablet) {
+		float: right;
+		width: 70.5%;
+		border-left: 2px solid #F2F2F2;
+	}
+	@include breakpoint(desktop) {
+		float: right;
+		width: 685px;
+		border-left: 2px solid #F2F2F2;
+	}
+}
+
+#campaign-content {
+	margin: 5px auto;
+	background: #FFF;
+	@include single-box-shadow(#999, 0, 0, 1px);
+	padding: 0 15px;
+}
+
+#information {
+	float: left;
+	padding-right: 20px;
+	width: 610px;
+	border-right: 2px solid #F2F2F2;
+	@include breakpoint(handheld) {
+		float: none;
+		padding-right: 0;
+		width: auto;
+		border-right: 0;
+		border-bottom: 2px solid #F2F2F2;
+	}
+	@include breakpoint(table) {
+		float: none;
+		padding-right: 0;
+		width: auto;
+		border-right: 0;
+		border-bottom: 2px solid #F2F2F2;
+	}
+}
+
+#form-embed {
+	float: right;
+	margin-top: 15px;
+	width: 278px;
+	@include breakpoint(handheld) {
+		float: none;
+		width: auto;
+	}
+	@include breakpoint(tablet) {
+		float: none;
+		width: auto;
+	}
+}
+
+#small-print {
+	margin-top: 20px;
+	p {
+		font-size: 11px;
+		line-height: 16px;
+	}
+}

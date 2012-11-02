@@ -1,0 +1,86 @@
+#header, #page, #footer {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+#body, #header, #footer, #page {
+	background: none;
+}
+
+#navigation, #toggle-navigation, #site-info, #sidebar, #footer, #page input[type="submit"], #page button, a.btn, iframe, .map, .video, .video-placeholder {
+	display: none;
+}
+
+.container, #page {
+	position: relative;
+	width: 100%;
+}
+
+#area-name {
+	position: absolute;
+	top: -55px;
+	right: 0;
+	z-index: 100;
+}
+
+#content {
+	float: none;
+	padding: 0;
+	width: 100%;
+	border-left: none;
+}
+
+#content ul.courses, #content ul.rooms {
+	margin-left: 0 !important;
+}
+
+#content ul.courses li:first-child, #content ul.rooms li:first-child {
+	border-left: 2px solid #F2F2F2;
+}
+
+p a:link:after, p a:visited:after {
+	content: " [link: " attr(href) "] ";
+	font-size: 13px;
+}
+
+.hidden, #content ul.toggle-tabs .text {
+	display: block !important;
+}
+
+.fc-event-skin {
+	background: none !important;
+	color: #000 !important;
+}	
+
+.fc-event-hori {
+	padding: 1px 0 0 0 !important;
+	border-width: 0 0 1px 0 !important;
+	border-bottom-style: dotted !important;
+	border-bottom-color: #000 !important;
+}	
+
+.fc-event-hori .fc-event-inner {
+	padding: 0 1px !important;
+	border-width: 0 !important;
+}
+
+.fc-event-vert {
+	padding: 0 1px 0 0 !important;
+	border-width: 0 0 0 1px !important;
+	border-left-style: dotted !important;
+	border-left-color: #000 !important;
+}	
+
+.fc-event-vert .fc-event-inner {
+	padding: 1px 0 !important;
+	border-width: 0 !important;
+}
+
+.fc-event-bg {
+	display: none !important;
+}
+
+.fc-event .ui-resizable-handle {
+	display: none !important;
+}

@@ -1,0 +1,110 @@
+#footer {
+	position: relative;
+	z-index: 1;
+	padding: 14px 0;
+	background: #FFF;
+	@include single-box-shadow(#999, 0, -1px, 1px);
+	font-size: 12px;
+	p {
+		margin-top: 0;
+		color: #666;
+		text-align: right;
+		font-size: 12px;
+		@include breakpoint(handheld) {
+			text-align: center;
+			font-size: 11px;
+		}
+	}
+	a {
+		color: #666;
+		&:visited { color: #666; }
+		&:hover, &:active, &:focus { color: #000; }
+	}
+	ul {
+		&.footer-nav {
+			float: left;
+			li { margin-bottom: 10px; }
+			@include breakpoint(handheld) {
+				float: left;
+				margin: 0 0 25px 5%;
+			} 
+		}
+		&.inner {
+			margin-left: 14px;
+			@include breakpoint(handheld) {
+				float: right;
+				margin-right: 5%;
+				margin-left: 0;
+			}
+		}
+	}
+	@include breakpoint(handheld) {
+		.right {
+			float: none;
+			clear: both;
+		}
+	}
+}
+
+#csymbol { font-family: Helvetica,Arial,sans-serif; }
+
+#social {
+	float: right;
+	height: 32px;
+	li {
+		float: left;
+		margin-right: 5px;
+		&:last-child { margin-right: 0; }
+		a {
+			display: block;
+			width: 32px;
+			height: 32px;
+			background: white url(../img/social.png) no-repeat;
+			text-indent: -9999px;
+			@include retina {
+				background-image: url(../img/social@2x.png);
+				background-size: 32px 32px;
+			}
+		}
+		&#email-icon a {
+			background-position: 0 0;
+			&:visited { background-position: 0 0; }
+			&:hover, &:focus, &:active { background-position: 0 -32px; }
+		}
+		&#facebook-icon a {
+			background-position: -32px 0;
+			&:visited { background-position: -32px 0; }
+			&:hover, &:active, &:focus { background-position: -32px -32px; }
+		}
+		&#flickr-icon a {
+			background-position: -64px 0;
+			&:visited { background-position: -64px 0; }
+			&:hover, &:active, &:focus { background-position: -64px -32px; }
+		}
+		&#linkedin-icon a {
+			background-position: -96px 0;
+			&:visited { background-position: -96px 0; }
+			&:hover, &:active, &:focus { background-position: -96px -32px; }
+		}
+		&#rss-icon a {
+			background-position: -128px 0;
+			&:visited { background-position: -128px 0; }
+			&:hover, &:active, &:focus { background-position: -128px -32px; }
+		}
+		&#twitter-icon a {
+			background-position: -160px 0;
+			&:visited { background-position: -160px 0; }
+			&:hover, &:active, &:focus { background-position: -160px -32px; }
+		}
+		&#youtube-icon a {
+			background-position: -192px 0;
+			&:visited { background-position: -192px 0; }
+			&:hover, &:active, &:focus { background-position: -192px -32px; }
+		}
+	}
+	@include breakpoint(handheld) {
+		float: none;
+		margin: 25px auto 10px;
+		width: 255px;
+	}
+}
